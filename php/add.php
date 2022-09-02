@@ -84,7 +84,7 @@ $next = $total + 1;
             <form method="post" action="add.php">
                 <div class="form-control">
                     <label for="">Número da questão </label>
-                    <input type="question_number" value="<?php echo $next; ?>" name="question_number">
+                    <input type="number" value="<?php echo $next; ?>" name="question_number">
                 </div>
 
                 <div class="form-control">
