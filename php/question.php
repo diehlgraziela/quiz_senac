@@ -15,7 +15,7 @@
         <h1>Quiz</h1>
     </header>
 
-    <main>
+    <main class="question">
         <div class="container">
             <div class="current">Questão 1 de 5</div>
             <h2 class="question">

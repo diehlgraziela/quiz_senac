@@ -1,3 +1,5 @@
+<?php include 'php/connection.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +17,7 @@
         <h1>Quiz</h1>
     </header>
 
-    <main>
+    <main class="first-page">
         <div class="container">
             <ul>
                 <li><b>Número de questões:</b> 5</li>

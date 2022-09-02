@@ -74,11 +74,9 @@ main {
     padding: 1rem 0;
 }
 
-/* question.php */
-.current {
-    background: #363636;
-    width: 100%;
-    padding: 1rem;
+/* start */
+.first-page .container {
+    align-items: center;
 }
 
 a.start {
@@ -91,6 +89,13 @@ a.start:hover {
     background: #fa9d2b;
 }
 
+/* question.php */
+.current {
+    background: #363636;
+    width: 100%;
+    padding: 1rem;
+}
+
 .choices {
     display: flex;
     flex-direction: column;
@@ -100,6 +105,10 @@ a.start:hover {
 .choices li {
     display: flex;
     gap: 6px;
+}
+
+.question button {
+    width: 180px;
 }
 
 /* final.php */
