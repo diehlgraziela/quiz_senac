@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +19,7 @@
 
     <main class="final">
         <div class="container">
-            <h2>Pontuação final: 5</h2>
+            <h2>Pontuação final: <?php echo $_SESSION['score']; ?></h2>
             <a href="question.php?n=1" class="start">Reiniciar</a>
         </div>
     </main>
