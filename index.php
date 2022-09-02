@@ -22,7 +22,7 @@
             <ul>
                 <li><b>Número de questões:</b> 5</li>
             </ul>
-            <a href="php/question.php?n" class="start">Começar Quiz</a>
+            <a href="php/question.php?n=1" class="start">Começar Quiz</a>
         </div>
     </main>
 </body>

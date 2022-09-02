@@ -1,3 +1,24 @@
+<?php include 'connection.php'; ?>
+
+<?php
+//set question number
+$number = (int)$_GET['n'];
+
+//get question
+$query = "SELECT * FROM `questions` WHERE question_number = $number";
+
+//get result
+$result = $mysqli->query($query) or die($mysqli->error . __LINE__);
+$question = $result->fetch_assoc();
+
+
+//get choices
+$query = "SELECT * FROM `choices` WHERE question_number = $number";
+
+//get result
+$choices = $mysqli->query($query) or die($mysqli->error . __LINE__);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,16 +40,18 @@
         <div class="container">
             <div class="current">Questão 1 de 5</div>
             <h2 class="question">
-                Essa questão está correta?
+                <?php echo $question['text']; ?>
             </h2>
 
             <form action="post" action="process.php">
                 <ul class="choices">
-                    <li><input name="choice" type="radio" value="1">Sim</li>
-                    <li><input name="choice" type="radio" value="2">Não</li>
-                    <li><input name="choice" type="radio" value="3">Claro</li>
-                    <li><input name="choice" type="radio" value="4">Talvez</li>
+                    <?php while ($row = $choices->fetch_assoc()) : ?>
+
+                        <li><input name="choice" type="radio" value="<?php $row['id']; ?>"> <?php echo $row['text']; ?> </li>
+
+                    <?php endwhile; ?>
                 </ul>
+
                 <button type="submit">Responder</button>
                 <button type="submit">Pular</button>
             </form>
