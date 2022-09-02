@@ -2,6 +2,8 @@ const askButton = document.querySelector('.ask button');
 const eliminateButton = document.querySelector('.eliminate button');
 const skipButton = document.querySelector('.skip button');
 
+const lineThrough = document.querySelectorAll('.choices li p');
+
 (function ask() {
     let counter = 0;
     let score = document.querySelector('.ask input');
@@ -53,3 +55,9 @@ const skipButton = document.querySelector('.skip button');
     let localScore = localStorage.getItem('skip');
     score.value = localScore;
 })();
+
+for (let eliminate of lineThrough) {
+    eliminate.addEventListener('click', () => {
+        eliminate.classList.toggle('eliminate');
+    })
+}

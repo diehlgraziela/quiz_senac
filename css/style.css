@@ -168,6 +168,10 @@ a.start:hover {
     border-bottom: 1px solid var(--bg-color-darker);
 }
 
+.choices li p.eliminate {
+    text-decoration: line-through;
+}
+
 .question button[type="submit"] {
     width: 180px;
 }

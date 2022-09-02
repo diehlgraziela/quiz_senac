@@ -54,7 +54,10 @@ $total = $results->num_rows;
                     <ul class="choices">
                         <?php while ($row = $choices->fetch_assoc()) : ?>
 
-                            <li><input name="choice" type="radio" value="<?php echo $row['id']; ?>"> <?php echo $row['text']; ?> </li>
+                            <li>
+                                <input name="choice" type="radio" value="<?php echo $row['id']; ?>" />
+                                <p><?php echo $row['text']; ?></p>
+                            </li>
 
                         <?php endwhile; ?>
                     </ul>
