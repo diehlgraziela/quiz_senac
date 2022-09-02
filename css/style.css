@@ -135,6 +135,18 @@ a.start:hover {
     border: none;
 }
 
-.add form button {
+.add form input[type="submit"] {
+    background: var(--orange);
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 18px;
+    margin-top: 1rem;
     width: 250px;
+}
+
+.add .go-back {
+    font-size: 14px;
+    text-decoration: underline;
 }

@@ -118,6 +118,7 @@ $next = $total + 1;
                 </div>
 
                 <input type="submit" name="submit" value="Adicionar">
+                <a href="../index.php" class="go-back">Voltar ao início</a>
             </form>
         </div>
     </main>

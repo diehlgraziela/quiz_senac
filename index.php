@@ -32,6 +32,7 @@ $total = $results->num_rows;
                 <li><b>Número de questões:</b> <?php echo $total; ?></li>
             </ul>
             <a href="php/question.php?n=1" class="start">Começar Quiz</a>
+            <a href="php/add.php" class="start">Adicionar questões</a>
         </div>
     </main>
 </body>
