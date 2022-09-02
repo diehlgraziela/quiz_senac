@@ -68,22 +68,25 @@ $total = $results->num_rows;
                 <h2>Preciso de ajuda</h2>
 
                 <div class="ask">
-                    <span>0/3</span>
+                    <input class="help-score" type="number" value="0" min="-1" max="3" readonly><span>/3</span>
                     <button>Perguntar aos colegas</button>
                 </div>
 
                 <div class="eliminate">
-                    <span>0/3</span>
+                    <input class="help-score" type="number" value="0" readonly><span>/3</span>
                     <button>Eliminar 1 alternativa</button>
                 </div>
 
                 <div class="skip">
-                    <span>0/3</span>
+                    <input class="help-score" type="number" value="0" readonly><span>/3</span>
                     <button>Pular pergunta</button>
                 </div>
             </div>
         </div>
     </main>
+
+    <!-- scripts -->
+    <script src="../js/script.js"></script>
 </body>
 
 </html>
