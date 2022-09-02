@@ -137,6 +137,10 @@ a.start:hover {
     font-size: 16px;
 }
 
+.help-score::placeholder {
+    color: var(--text-color);
+}
+
 .ask button,
 .eliminate button,
 .skip button {

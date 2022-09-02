@@ -68,17 +68,17 @@ $total = $results->num_rows;
                 <h2>Preciso de ajuda</h2>
 
                 <div class="ask">
-                    <input class="help-score" type="number" value="0" min="-1" max="3" readonly><span>/3</span>
+                    <input class="help-score" type="number" value="0" placeholder="0" readonly><span>/3</span>
                     <button>Perguntar aos colegas</button>
                 </div>
 
                 <div class="eliminate">
-                    <input class="help-score" type="number" value="0" readonly><span>/3</span>
+                    <input class="help-score" type="number" value="0" placeholder="0" readonly><span>/3</span>
                     <button>Eliminar 1 alternativa</button>
                 </div>
 
                 <div class="skip">
-                    <input class="help-score" type="number" value="0" readonly><span>/3</span>
+                    <input class="help-score" type="number" value="0" placeholder="0" readonly><span>/3</span>
                     <button>Pular pergunta</button>
                 </div>
             </div>

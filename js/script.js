@@ -4,39 +4,52 @@ const skipButton = document.querySelector('.skip button');
 
 (function ask() {
     let counter = 0;
+    let score = document.querySelector('.ask input');
 
     askButton.addEventListener('click', () => {
-        let score = document.querySelector('.ask input');
         score.value = ++counter;
 
         if (counter >= 3) {
             score.value = 3;
+
         }
+        localStorage.setItem('ask', score.value);
     })
+
+    let localScore = localStorage.getItem('ask');
+    score.value = localScore;
 })();
 
 (function ask() {
     let counter = 0;
+    let score = document.querySelector('.eliminate input');
 
     eliminateButton.addEventListener('click', () => {
-        let score = document.querySelector('.eliminate input');
         score.value = ++counter;
 
         if (counter >= 3) {
             score.value = 3;
         }
+        localStorage.setItem('eliminate', score.value);
     })
+
+    let localScore = localStorage.getItem('eliminate');
+    score.value = localScore;
 })();
 
 (function ask() {
     let counter = 0;
+    let score = document.querySelector('.skip input');
 
     skipButton.addEventListener('click', () => {
-        let score = document.querySelector('.skip input');
         score.value = ++counter;
 
         if (counter >= 3) {
             score.value = 3;
         }
+        localStorage.setItem('skip', score.value);
     })
+
+    let localScore = localStorage.getItem('skip');
+    score.value = localScore;
 })();
