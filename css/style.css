@@ -112,8 +112,8 @@ a.start:hover {
 }
 
 /* final.php */
-.final {
-    text-align: center;
+.final .container {
+    align-items: center;
 }
 
 /* add.php */

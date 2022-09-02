@@ -11,12 +11,17 @@ $query = "SELECT * FROM `questions` WHERE question_number = $number";
 $result = $mysqli->query($query) or die($mysqli->error . __LINE__);
 $question = $result->fetch_assoc();
 
-
 //get choices
 $query = "SELECT * FROM `choices` WHERE question_number = $number";
 
 //get result
 $choices = $mysqli->query($query) or die($mysqli->error . __LINE__);
+
+//get total questions
+$query = "SELECT * from questions";
+//get result
+$results = $mysqli->query($query) or die($mysqli->error . __LINE__);
+$total = $results->num_rows;
 ?>
 
 <!DOCTYPE html>
@@ -38,22 +43,22 @@ $choices = $mysqli->query($query) or die($mysqli->error . __LINE__);
 
     <main class="question">
         <div class="container">
-            <div class="current">Questão 1 de 5</div>
+            <div class="current">Questão <?php echo $question['question_number'] ?> de <?php echo $total ?></div>
             <h2 class="question">
                 <?php echo $question['text']; ?>
             </h2>
 
-            <form action="post" action="process.php">
+            <form method="post" action="./process.php">
                 <ul class="choices">
                     <?php while ($row = $choices->fetch_assoc()) : ?>
 
-                        <li><input name="choice" type="radio" value="<?php $row['id']; ?>"> <?php echo $row['text']; ?> </li>
+                        <li><input name="choice" type="radio" value="<?php echo $row['id']; ?>"> <?php echo $row['text']; ?> </li>
 
                     <?php endwhile; ?>
                 </ul>
 
                 <button type="submit">Responder</button>
-                <button type="submit">Pular</button>
+                <input type="hidden" name="number" value="<?php echo $number ?>">
             </form>
         </div>
     </main>
