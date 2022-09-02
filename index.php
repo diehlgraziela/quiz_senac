@@ -4,7 +4,7 @@
 //get total number of questions
 $query = "SELECT * FROM questions";
 
-//get results
+//get result
 $results = $mysqli->query($query) or die($mysqli->error . __LINE__);
 $total = $results->num_rows;
 ?>

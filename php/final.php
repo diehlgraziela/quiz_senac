@@ -21,6 +21,7 @@
         <div class="container">
             <h2>Pontuação final: <?php echo $_SESSION['score']; ?></h2>
             <a href="question.php?n=1" class="start">Reiniciar</a>
+            <?php session_destroy(); ?>
         </div>
     </main>
 </body>
