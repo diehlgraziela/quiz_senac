@@ -12,9 +12,7 @@
 
 <body>
     <header>
-        <div class="container">
-            <h1>Quiz</h1>
-        </div>
+        <h1>Quiz</h1>
     </header>
 
     <main>
