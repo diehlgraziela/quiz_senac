@@ -44,23 +44,44 @@ $total = $results->num_rows;
 
     <main class="question">
         <div class="container">
-            <div class="current">Questão <?php echo $question['question_number'] ?> de <?php echo $total ?></div>
-            <h2 class="question">
-                <?php echo $question['text']; ?>
-            </h2>
+            <div class="question-container">
+                <div class="current">Questão <?php echo $question['question_number'] ?> de <?php echo $total ?></div>
+                <h2 class="question">
+                    <?php echo $question['text']; ?>
+                </h2>
 
-            <form method="post" action="./process.php">
-                <ul class="choices">
-                    <?php while ($row = $choices->fetch_assoc()) : ?>
+                <form method="post" action="./process.php">
+                    <ul class="choices">
+                        <?php while ($row = $choices->fetch_assoc()) : ?>
 
-                        <li><input name="choice" type="radio" value="<?php echo $row['id']; ?>"> <?php echo $row['text']; ?> </li>
+                            <li><input name="choice" type="radio" value="<?php echo $row['id']; ?>"> <?php echo $row['text']; ?> </li>
 
-                    <?php endwhile; ?>
-                </ul>
+                        <?php endwhile; ?>
+                    </ul>
 
-                <button type="submit">Responder</button>
-                <input type="hidden" name="number" value="<?php echo $number ?>">
-            </form>
+                    <button type="submit">Responder</button>
+                    <input type="hidden" name="number" value="<?php echo $number ?>">
+                </form>
+            </div>
+
+            <div class="help">
+                <h2>Preciso de ajuda</h2>
+
+                <div class="ask">
+                    <span>0/3</span>
+                    <button>Perguntar aos colegas</button>
+                </div>
+
+                <div class="eliminate">
+                    <span>0/3</span>
+                    <button>Eliminar 1 alternativa</button>
+                </div>
+
+                <div class="skip">
+                    <span>0/3</span>
+                    <button>Pular pergunta</button>
+                </div>
+            </div>
         </div>
     </main>
 </body>

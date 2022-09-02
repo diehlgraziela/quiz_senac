@@ -21,7 +21,8 @@ html {
 }
 
 body {
-    background: var(--bg-color);
+    /* background: url(../img/background.png); */
+    background-size: cover;
     width: 100%;
 }
 
@@ -99,10 +100,38 @@ a.start:hover {
 }
 
 /* question.php */
+.question .container {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.question-container {
+    width: 50%;
+}
+
+.help {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 30%;
+    gap: 1rem;
+    padding: 1rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.ask button,
+.eliminate button,
+.skip button {
+    width: 100%;
+    margin: 0;
+}
+
 .current {
     background: var(--bg-color-darker);
     width: 100%;
     padding: 1rem;
+    margin-bottom: 1rem;
 }
 
 .choices {
@@ -118,7 +147,7 @@ a.start:hover {
     border-bottom: 1px solid var(--bg-color-darker);
 }
 
-.question button {
+.question button[type="submit"] {
     width: 180px;
 }
 
@@ -142,8 +171,8 @@ a.start:hover {
 
 .add form .form-control input {
     padding: 0.8rem 0.4rem;
-    background: #f5f5f5;
-    border: 1px solid #cfcfcf;
+    background: #f8f8f8;
+    border: 1px solid #e0e0e0;
     border-radius: 2px;
 }
 
@@ -158,4 +187,21 @@ a.start:hover {
 .add .go-back {
     font-size: 14px;
     text-decoration: underline;
+}
+
+/* media query */
+@media(max-width:768px) {
+    .question .container {
+        flex-direction: column;
+        width: 60%;
+        gap: 4rem;
+    }
+
+    .question-container {
+        width: 100%;
+    }
+
+    .help {
+        width: 100%;
+    }
 }
